@@ -1,0 +1,37 @@
+if game.PlaceId == 6299805723 then
+
+    --Carregar
+    local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+    -- Main
+    local Window = OrionLib:MakeWindow({Name = "Lugh Hub", HidePremium = false, SaveConfig = true, ConfigFolder = "LughCfg", IntroEnabled = false})
+
+    -- Jogador
+    local LughTab = Window:MakeTab({
+	    Name = "Start",
+	    Icon = "rbxassetid://4483345998",
+	    PremiumOnly = false
+    })
+    local Section = LughTab:AddSection({
+	    Name = "Scripts"
+    })
+    LughTab:AddButton({
+        Name = "Dupe!",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/sandwichk/RobloxScripts/main/Scripts/BadWare/Dupe/AFSim", true))()
+          end
+    })
+    LughTab:AddButton({
+        Name = "Platinium Hub!",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/ZaRdoOx/Loader/main/PlatiniumLoader"))()
+          end
+    })
+    LughTab:AddButton({
+        Name = "Zer0 Hub!",
+        Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/Discord0000/Zer0Hub/main/MainScript.lua"))()
+          end
+    })
+
+end
